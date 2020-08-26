@@ -1,0 +1,34 @@
+version: "3"
+services:
+  hub:
+    image: selenium/hub:3.14
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome:latest
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+    volumes:
+      - ./downloads:/home/seluser/Downloads
+  firefox:
+    image: selenium/node-firefox:3.14
+    shm_size: '1gb'
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+    volumes:
+      - ./downloads:/home/seluser/Downloads
+  search-module:
+    image: thotavenkatdocker/selenium-docker
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - MODULE=Searchpagetestng.xml
+    volumes:
+      - ./search-result:E:\eclipse\Workspace\org.com.newframework/test-output
