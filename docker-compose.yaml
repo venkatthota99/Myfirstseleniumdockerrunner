@@ -22,7 +22,7 @@ services:
     volumes:
       - ./downloads:/home/seluser/Downloads
   search-module:
-    image: thotavenkatdocker/selenium-docker
+    image: thotavenkat/selenium-docker
     depends_on:
       - chrome
       - firefox
