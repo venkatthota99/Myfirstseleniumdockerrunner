@@ -21,4 +21,4 @@ services:
       - HUB_HOST=hub
       - MODULE=Searchpagetestng.xml
     volumes:
-      - ./search-result:E:\eclipse\Workspace\org.com.newframework/test-output
+      - ./search-result:E:\eclipse\Workspace\org.com.newframework\test-output
