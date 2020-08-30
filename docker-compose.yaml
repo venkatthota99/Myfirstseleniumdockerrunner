@@ -21,4 +21,4 @@ services:
       - HUB_HOST=hub
       - MODULE=Searchpagetestng.xml
     volumes:
-      - ./search-result: /Users/share/test-output
+      - ./search-result:/Users/share/test-output
