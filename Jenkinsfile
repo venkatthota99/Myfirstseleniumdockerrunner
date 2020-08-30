@@ -3,24 +3,24 @@ pipeline{
 	stages{
 		stage("pull Latest Image"){
 			steps{
-				sh "docker pull thotavenkat/seleniumdocker"
+				bat "docker pull thotavenkat/seleniumdocker"
 			}
 		}
 		stage("Start Grid"){
 			steps{
-				sh "docker-compose up -d hub chrome firefox"
+				bat "docker-compose up -d hub chrome firefox"
 			}
 		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose up Searchpagestestng  testng"
+				bat "docker-compose up Searchpagestestng  testng"
 			}
 		}
 	}
 	post{
 		always{
 			archiveArtifacts artifacts: 'output/**'
-			sh "docker-compose down"
+			bat "docker-compose down"
 		}
 	}
 }
