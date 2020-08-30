@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("pull Latest Image"){
 			steps{
-				bat "docker pull thotavenkat/seleniumdocker"
+				bat "docker pull thotavenkat/selenium-docker"
 			}
 		}
 		stage("Start Grid"){
