@@ -16,7 +16,6 @@ services:
     image: thotavenkat/selenium-docker
     depends_on:
       - chrome
-      - firefox
     environment:
       - BROWSER=chrome
       - HUB_HOST=hub
