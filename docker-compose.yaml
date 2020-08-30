@@ -12,7 +12,7 @@ services:
       - HUB_HOST=hub
     volumes:
       - ./downloads:/home/seluser/Downloads
-  search-module:
+  Search-module:
     image: thotavenkat/selenium-docker
     depends_on:
       - chrome
