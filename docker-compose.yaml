@@ -21,4 +21,4 @@ services:
       - HUB_HOST=hub
       - MODULE=Searchpagetestng.xml
     volumes:
-      - "./Search-result:/C:/Users/Share/test-output"
+      - "./Search-result:/E:\Jenkins\workspace\MyFirst_Seleniumdocker_Runner\Search-result/test-output"
